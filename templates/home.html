@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-
+{% load static %}
 <html lang="en">
 
 <head>
+    <link rel="icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAe1BMVEX///8AAAAEBAQKCgoQEBD4+PgUFBTm5uYbGxvu7u719fUwMDDi4uIqKirKysr7+/ujo6NxcXGHh4ePj49hYWFDQ0Pa2tpPT0+zs7M2NjYlJSU7OztVVVXQ0NCbm5uVlZW+vr52dnYgICCqqqpISEh/f39oaGjCwsJaWlrp4v/mAAAFF0lEQVR4nO2ci5qiMAyFEVRu3tDRARVF1NH3f8JlnJu7nyOnnbSNO/kfoPRA0yZpgucJgiAIgiD8CsLTZJqd58Uy6gZ+xw/60XKYrtbZdJKXsevJYSSn2VMadO4RzbPNiLWcJM8K/66GK9Jsz1NMuJ3DIr7EVK6n/Q+9yVxVxDtRNnI9+S8Wu76mjAv1buBawYX88BMVF/yz+89SFT+WcWGVO5Vx0jWNGxTuvsrgmU7GK2dHtjK7f+5pEBzH9mUsiIzjb4qFbR1T5dMPI9hYlZEQW8c168SejsXQnI7GcQlt6ci7JnU0R70lQ5kYMo8v+laOlIlpGQ2BBSU2dDTfxPjq2ljR0eksDUdduXH7+GBldBdeGN6vrnkyqCNe2tPR6Zhz7MeETjtA35iZHK3qaJwVQzpKa4b+wd6Ijp5RB+smSyPhyc66jk7HhE9vf2E1RD16IRo71vI8248GceIlcVjmm2yunv6akevIFWfQPd9K7ZYzxfcRkVtJqvT8YvKtgzGYKn0X6o1Lyeddne6O1dsqSJkTC1HwTep21yJ+woejjXsVLCSDvNY9nBOjNXc4T91FPb1FBI64otSxQHUs8cAOVeJTuo4voI6hyoIuwdVFuG8l4CMVw1PQ8F7ohOyxJyonDLC9K6UTssaE3D89bhBD54lP5m+BK+uoPvIMGrikEoKtrFTDK0qgTzKhEoKtLK3cYIaMrPGpbwO9trPW0CNkaKq8UIk8zNdMcSIvicpvhCxS74N4HnJhRLX/QpdTutlz5C3VREKQLOlQd3DkdO/S6IAcxqnu6IgBBjRCoFNE+zYjBAb3aYQgedJIe/TEnhDkONTdszxvDIxOtLSQROlWe/QYGL1PI2S6e3laH+bFsO5/6zwq+72fDAAhVNvvNUk4KEdVvt9sp8fs5fx8WKXLqPuDaBTZtQgDEnNUgJCD60kiTAEhhLGuOZA9kcyNN0kNCDFzb0ULFCJYr0XTAIkQiXxGsyDZRup8vAmgwhZtz9oeCZT+JcsGmQM5RIw4KMRg98T8TxGwAIH/5ovdVfDfs7aQDoO1TkRUWCGFdnrGFiVYikeWwDZECd6066T4bQJf6VauZ3qfEVr58Ox6pvfJ0WKBrrVqfy1mcOEXa0vv4WUo+mk/C4R4Q9PQYkOMMid0u2oMhLOTtcHrIv3K9WS/JwYLDy4wNvQRkvr5QD8tbhylfj/64lIqQqXqUru9iCpUKpWlPtvU4nin8jn6+rcthhkodfWmPH43cIOTUsGyzQZXNbZKzQF8kz9QIdMHcLGtddS6rAu25hErmXnGNkAPVVoc+C4rL1RpylqxXVZeqNDh4Lv4awVIrLCuaraHebNfrXAda57/p3oDD6Is/3dDEegy6kLKOTZHc+0NmYFOQzpC1E8MGIfmr6COSc38xhbt9Ttw3q0aQvASh3350hnTsXM9zzagDoRHqMzAjnTWp+AFrP+HbwbuEyiWYm8fnndCdDC/G7yAOIum/wtEwQBwsnz3v8lsB+nQeQADgX5xUbP2d9+JgZXFNtd+DeAuFq7nCAFcojOPQN5pz5zQ/+jEBL12E8lczxECcHwr13OEaK+sDh5iZXm7ViGPsWcBsSH78PaN9nP9AeKQV9rvER7jFAEarfne5giCIAiCIAiCIAiCwJ/W1MMrrieJIEK4IUK4IUK4IUK4IUK4IUK4IUK4IUK4IUK4IUK4IUK4IUK4IUK4IUK4IUK4IUK48d8IEQRBEH4jfwDmOUj99+ZLdQAAAABJRU5ErkJggg==">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
     </script>
@@ -10,6 +12,7 @@
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
     </script>
+    <link href="{% static 'style/home.css'  %}" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,26 +23,29 @@
     <nav class="navbar navbar-expand-lg bg-light">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item p-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-question-square-fill" viewBox="0 0 16 16">
-                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.496 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                    class="bi bi-question-square-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.496 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z" />
+                </svg>
             </li>
-            <li class="nav-item p-3 "><p class="h-40">GET QUIZED </p>
+            <li class="nav-item p-3 ">
+                <p class="h-40">GET QUIZED </p>
             </li>
         </ul>
-        
-             
+
+
         <ul class="navbar-nav ml-auto">
             {% if user.is_authenticated %}
             <li class="nav-item">
                 <a class="nav-link p-3 text-dark" href="">Welcome {{user.username}} </a>
             </li>
             <li class="nav-item">
-               
-                <a class="nav-link p-3" href="{% url 'account_logout' %}">  LOG OUT </a>
+
+                <a class="nav-link p-3" href="{% url 'account_logout' %}"> LOG OUT </a>
             </li>
             {% else %}
-            
+
             <li class="nav-item p-3">
                 <a class="nav-link" href="{% url 'account_login' %}">LOG IN </a>
             </li>
@@ -49,10 +55,88 @@
             {% endif %}
         </ul>
     </nav>
-    
+    <!-- {% if user.is_authenticated %}
 <div>
     <a class="btn btn-success text-center" href="/add">Add favourite subject</a>
 </div>
+{% endif %} -->
+
+
+    <!-- <div class="d-flex flex-column py-3">
+
+
+<label for="Number_of_questions" class="col-sm-2 col-form-label">Number of questions</label>
+<select class="custom-select my-5" id="Number_of_questions">
+    <option selected>NUmber of questions </option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+
+</select>
+
+<select class="custom-select  my-5">
+    <option selected>Select category to challenge yourself</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+
+</select>
+
+</div> -->
+    <h1 class="text-success font-weight-bold text-center py-4 ">Keep Challenging Yourself</h1>
+    <div class="user_preference">
+        <label for="trivia_amount">Number of Questions:</label>
+        <input type="number" name="trivia_amount" id="trivia_amount" class="form-control" min="1" max="50" value="10">
+        <br><br>
+        <label for="trivia_category">Select Category: </label>
+        <select name="trivia_category" class="form-control">
+            <option value="any">Any Category</option>
+            <option value="9">General Knowledge</option>
+            <option value="10">Entertainment: Books</option>
+            <option value="11">Entertainment: Film</option>
+            <option value="12">Entertainment: Music</option>
+            <option value="13">Entertainment: Musicals &amp; Theatres</option>
+            <option value="14">Entertainment: Television</option>
+            <option value="15">Entertainment: Video Games</option>
+            <option value="16">Entertainment: Board Games</option>
+            <option value="17">Science &amp; Nature</option>
+            <option value="18">Science: Computers</option>
+            <option value="19">Science: Mathematics</option>
+            <option value="20">Mythology</option>
+            <option value="21">Sports</option>
+            <option value="22">Geography</option>
+            <option value="23">History</option>
+            <option value="24">Politics</option>
+            <option value="25">Art</option>
+            <option value="26">Celebrities</option>
+            <option value="27">Animals</option>
+            <option value="28">Vehicles</option>
+            <option value="29">Entertainment: Comics</option>
+            <option value="30">Science: Gadgets</option>
+            <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
+            <option value="32">Entertainment: Cartoon &amp; Animations</option>
+        </select>
+        <br><br>
+        <label for="trivia_difficulty">Select Difficulty: </label>
+        <select name="trivia_difficulty" class="form-control">
+            <option value="any">Any Difficulty</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <br><br>
+        <label for="trivia_type">Select Type: </label>
+        <select name="trivia_type" class="form-control">&gt;
+            <option value="any">Any Type</option>
+            <option value="multiple">Multiple Choice</option>
+            <option value="boolean">True / False</option>
+        </select>
+        <div class="text-center">
+            <a class="btn btn-primary my-5 text-white" href="{% url 'rules_page' %}">
+                Get Started
+
+            </a>
+        </div>
 
 </body>
 

@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
     #local apps
     'quiz.apps.QuizConfig',
-    'quiz_pages.apps.QuizPagesConfig',
+    'quiz_app2.apps.QuizApp2Config',
 
     #third party 
     'crispy_forms',

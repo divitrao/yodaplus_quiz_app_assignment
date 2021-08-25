@@ -1,0 +1,16 @@
+{% extends '_basic.html' %}
+{% load static %}
+{% block title %}Quiz{% endblock title %}
+
+{% block content %}
+
+<!-- <h1 class="text-center">Start it </h1> -->
+<nav class="nav flex-row bg-primary">
+    <div id="stopwatch_div" class="text-white text-center w-100 p-4">STOPWATCH <p id="stopwatch">PARA</p></div>
+
+</nav>
+<div>
+<button class="btn btn-info text-white" id="next_question">Next question</button>
+</div>
+<script src="{% static '/javascripts/challenge.js'%}" type="text/javascript"></script>
+{% endblock content %}
