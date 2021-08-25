@@ -1,7 +1,8 @@
-console.log('hi')
-console.log($('#stopwatch').html())
+// console.log('hi')
+// console.log($('#stopwatch').html())
 
-
+// var data = JSON.parse("{{data|escapejs}}");
+console.log(data)
 function start_time(second){
     
     
