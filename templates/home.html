@@ -1,10 +1,11 @@
 {% extends '_basic.html' %}
 {% load static %}
 {% block title %}HOME{% endblock title %}
-<link href="{% static 'style/home.css'  %}" rel="stylesheet">
+
 {% load crispy_forms_tags %}
 {% block content %}
-    <nav class="navbar navbar-expand-lg bg-light">
+<link href="{% static 'style/home.css'  %}" rel="stylesheet">
+    <nav class="navbar navbar-expand-lg bg-light w-100">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item p-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -68,7 +69,7 @@
 
 </div> -->
     <h1 class="text-success font-weight-bold text-center py-4 ">Keep Challenging Yourself</h1>
-    <form method="POST">
+    <form method="POST" id="forms" class="container">
         {% csrf_token %}
         {{ form|crispy }}
         <div class="text-center">

@@ -3,17 +3,55 @@
 {% block title %}Quiz{% endblock title %}
 
 {% block content %}
-
+<link href="{% static 'style/quiz_challenge.css'  %}" rel="stylesheet">
 <!-- <h1 class="text-center">Start it </h1> -->
 <nav class="nav flex-row bg-primary">
-    <div id="stopwatch_div" class="text-white text-center w-100 p-4">STOPWATCH <p id="stopwatch">PARA</p></div>
+    <div id="stopwatch_div" class="text-white text-center w-100 my-2">STOPWATCH <p id="stopwatch">PARA</p>
+    </div>
 
 </nav>
-<div>
-<button class="btn btn-info text-white" id="next_question">Next question</button>
-</div>
 
-{{data}}
+
+<!-- {{data}} -->
+
+<div class="q_and_opt_container  text-center  ">
+    <div class="question col-12 ">
+        <p id="question_id_tag">Questions</p>
+    </div>
+    <br><br>
+    <div id="multiple_choice">
+    <div class="d-flex justify-content-md-around">
+        <div class="option1 p-3 ">
+            <p id="option_1"  onclick="get_id(this.id)">Option 1</p>
+        </div>
+        <div class="option2 p-3">
+            <p id="option_2"  onclick="get_id(this.id)">Option 2</p>
+        </div>
+    </div>
+    <br><br>
+    <div class="d-flex justify-content-md-around">
+        <div class="option3 p-3 ">
+            <p id="option_3" onclick="get_id(this.id)">Option 3</p>
+        </div>
+        <div class="option4 p-3  ">
+            <p id="option_4" onclick="get_id(this.id)">Option 4</p>
+        </div>
+    </div>
+    </div>
+    <div id="bool">
+        <div class="d-flex justify-content-md-around">
+            <div class="option3 p-3 ">
+                <p id="option_1_true" onclick="get_id(this.id)">A) TRUE</p>
+            </div>
+            <div class="option4 p-3  ">
+                <p id="option_2_false" onclick="get_id(this.id)"> B)FALSE</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center my-3">
+    <button class="btn btn-info text-white" id="next_question">Next question</button>
+</div>
 <script>
 
     const data = JSON.parse(("{{data|escapejs}}"))

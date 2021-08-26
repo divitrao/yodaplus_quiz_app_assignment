@@ -63,7 +63,7 @@ class Myyform(forms.Form):
     I_Accept_Rules_and_Regulation = forms.BooleanField(required=True)
 
 class user_choice(forms.Form):
-    Number_of_question = forms.IntegerField(max_value=50,min_value=10)
+    Number_of_question = forms.IntegerField(max_value=49,min_value=10)
     category = forms.ChoiceField(choices=q_category,label='Select Category')
     difficulty = forms.ChoiceField(choices=q_difficulty,label='Select Difficulty')
     Q_type = forms.ChoiceField(choices=q_Type,label='Select Type')
