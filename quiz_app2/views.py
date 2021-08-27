@@ -1,7 +1,7 @@
 from django.http import request
 from django.shortcuts import redirect, render
 from django.utils.functional import new_method_proxy
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from django.views.generic.edit import FormView, CreateView
 from .forms import Addform, Myyform, user_choice
 from .models import model_tests
@@ -101,6 +101,22 @@ class quiz_challenge(TemplateView,first,UserAccessMixin):
         # print('type',first.type)
         context['data']  = dumps(data_dict)
         return context
+
+@method_decorator(login_required, name='dispatch')
+class Score_card(TemplateView):
+    template_name = 'score.html'
+    # def get(self, request, *args, **kwargs) :
+    #     context = super().get(request, *args, **kwargs)
+    #     print(kwargs)
+    #     context['data'] = kwargs
+    #     return  context
+    def get_context_data(self, **kwargs) :
+        context = super().get_context_data(**kwargs)
+        context['data'] = kwargs['pk']
+        return  context
+    # def get_queryset(self):
+    #     return super().get_queryset()
+    
     
 
 

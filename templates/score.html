@@ -1,0 +1,16 @@
+{% extends '_basic.html' %}
+{% load static %}
+{% block title %}Score{% endblock title %}
+
+{% block content %}
+
+<h1 class="text-center text-white bg-primary">Score Page</h1>
+
+<div class="container"><h3>Your score is : {{data}}</h3></div>
+
+<div class="container text-center">
+<a class="btn btn-secondary text-black" href="/">
+PLAY AGAIN 
+</a>
+</div>
+{% endblock content %}

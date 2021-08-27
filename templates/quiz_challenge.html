@@ -14,43 +14,46 @@
 
 <!-- {{data}} -->
 
-<div class="q_and_opt_container  text-center  ">
+<div class="q_and_opt_container  text-center  " id="main_div">
     <div class="question col-12 ">
-        <p id="question_id_tag">Questions</p>
+        <p id="question_id_tag"></p>
     </div>
     <br><br>
     <div id="multiple_choice">
-    <div class="d-flex justify-content-md-around">
+    <div class="d-flex justify-content-md-around first_second_opt">
         <div class="option1 p-3 ">
-            <p id="option_1"  onclick="get_id(this.id)">Option 1</p>
+            <p id="option_1"  onclick="get_id(this.id)"></p>
         </div>
         <div class="option2 p-3">
-            <p id="option_2"  onclick="get_id(this.id)">Option 2</p>
+            <p id="option_2"  onclick="get_id(this.id)"></p>
         </div>
     </div>
     <br><br>
-    <div class="d-flex justify-content-md-around">
+    <div class="d-flex justify-content-md-around third_fourth_opt">
         <div class="option3 p-3 ">
-            <p id="option_3" onclick="get_id(this.id)">Option 3</p>
+            <p id="option_3" onclick="get_id(this.id)"></p>
         </div>
         <div class="option4 p-3  ">
-            <p id="option_4" onclick="get_id(this.id)">Option 4</p>
+            <p id="option_4" onclick="get_id(this.id)"></p>
         </div>
     </div>
     </div>
     <div id="bool">
         <div class="d-flex justify-content-md-around">
             <div class="option3 p-3 ">
-                <p id="option_1_true" onclick="get_id(this.id)">A) TRUE</p>
+                <p id="option_1_true" onclick="get_id(this.id)" >TRUE</p>
             </div>
             <div class="option4 p-3  ">
-                <p id="option_2_false" onclick="get_id(this.id)"> B)FALSE</p>
+                <p id="option_2_false" onclick="get_id(this.id)">FALSE</p>
             </div>
         </div>
     </div>
 </div>
-<div class="text-center my-3">
+<div class=" my-3 d-flex  justify-content-md-around">
+    <a id="score" >
     <button class="btn btn-info text-white" id="next_question">Next question</button>
+</a>
+<button class="btn btn-primary" id="lock">LOCK</button>
 </div>
 <script>
 

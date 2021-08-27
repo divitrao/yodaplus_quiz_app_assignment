@@ -8,7 +8,7 @@
 }
 
 #option_1, #option_2, #option_3, #option_4, #option_1_true, #option_2_false{
-    /* width: 200px; */
+    width: 200px;
     position: relative;
     font-size: 20px;
     font-weight: bold;
@@ -27,3 +27,28 @@
 /* #option_3{
     background-color: wheat;
 } */
+
+@media only screen and (max-width: 452px){
+    .first_second_opt{
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+        margin-top: 1%;
+    }
+
+    .third_fourth_opt{
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+        margin-top: 1%;
+    }
+
+    /* .score_div{
+        margin-top: 3%;
+    } */
+}
+
+.disable_div{
+    pointer-events: none;
+    opacity: 0.7;
+}
