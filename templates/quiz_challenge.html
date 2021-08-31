@@ -5,11 +5,13 @@
 {% block content %}
 <link href="{% static 'style/quiz_challenge.css'  %}" rel="stylesheet">
 <!-- <h1 class="text-center">Start it </h1> -->
+<div id="main-div" >
 <nav class="nav flex-row bg-primary">
-    <div id="stopwatch_div" class="text-white text-center w-100 my-2">STOPWATCH <p id="stopwatch">PARA</p>
+    <div id="stopwatch_div" class="text-white text-center w-100 my-2">STOPWATCH <p id="stopwatch">00</p>
     </div>
 
 </nav>
+
 
 
 <!-- {{data}} -->
@@ -54,6 +56,7 @@
     <button class="btn btn-info text-white" id="next_question">Next question</button>
 </a>
 <button class="btn btn-primary" id="lock">LOCK</button>
+</div>
 </div>
 <script>
 
