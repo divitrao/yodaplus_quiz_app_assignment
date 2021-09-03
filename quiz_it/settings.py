@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     #local apps
     'quiz.apps.QuizConfig',
     'quiz_app2.apps.QuizApp2Config',
+    'from_database.apps.FromDatabaseConfig',
 
     #third party 
     'crispy_forms',

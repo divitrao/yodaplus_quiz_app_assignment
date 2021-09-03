@@ -79,7 +79,7 @@ function start_time(second){
 },1000)
 }
 
-start_time(16)
+start_time(60)
 
 
 function url_maker(){
@@ -244,7 +244,7 @@ $.ajax({
             else{
                 // console.log('clicked')
                 q_set(question_set['results'],counts)
-                start_time(16)
+                start_time(60)
                 if(counts==datas['question_count']-1){
                     $('#next_question').html('CHECK SCORE')
                 }

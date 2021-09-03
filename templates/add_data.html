@@ -1,0 +1,19 @@
+{% extends '_basic.html' %}
+{% load static %}
+{% block title %}ADD questions{% endblock title %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form method="POST" id="forms" >
+    {% csrf_token %}
+    {{form|crispy}}
+    <div class="text-center">
+        <button class="btn btn-primary my-5 text-white" >
+            Add your question
+
+        </button>
+    </div>
+</form>
+
+{% endblock content %}
