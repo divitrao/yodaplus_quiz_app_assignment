@@ -1,4 +1,4 @@
-let datas = data
+let datas = data  //This data i'm getting from Django by using json dumps in views 
 // console.log(datas)
 // console.log(datas['question_count'])
 //console.log(datas['category'])
@@ -47,6 +47,7 @@ let type_q ={
 }
 
 var interval_id
+// function for   timer 
 function start_time(second){
     $('#stopwatch').removeClass()
     clearInterval(interval_id)
@@ -81,11 +82,8 @@ function start_time(second){
 
 start_time(60)
 
-
+// function to create a valid url  
 function url_maker(){
-    // console.log(q_category,'q_category')
-    // console.log(q_difficulty,'q_difficulty')
-    // console.log(q_type,'q_type')
     if(q_category=='any'){
         q_category =0
     }
@@ -104,6 +102,8 @@ var total_score = 0
 var correct_answer 
 var arr_for_bool = []
 var bool_answer
+
+// function to lock the answer 
 $('#lock').click(function(){
     $('#main_div').addClass('disable_div')
     $("#lock").prop('disabled', true)
@@ -139,7 +139,7 @@ $('#lock').click(function(){
     
 })
 
-
+// function to get id of the clicked option 
 function get_id(ids){
     $("#lock").prop('disabled', false);
     // console.log(ids)
@@ -172,6 +172,7 @@ function get_id(ids){
 
 }
 
+//function to show options and questions
 function q_set(d,q_number=0){
    
     try{
